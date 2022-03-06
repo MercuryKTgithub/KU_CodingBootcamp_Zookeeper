@@ -58,6 +58,8 @@ app.get('/api/animals', (req, res) => { // res.json(animals); //res parameter (s
 // need to use listen() method onto our server to make our server listen
 app.listen(MYPORT, () => {
   console.log(`API server now on port ${MYPORT}`);
-  console.log(`Example app listening at http://localhost:${MYPORT}/api/animals`)
-  console.log(`Example app listening at https://mercuryktzookeeper.herokuapp.com/api/animals`)
+  console.log(`Example app listening at http://localhost:${MYPORT}/api/animals`);
+  console.log(`Example app listening at https://mercuryktzookeeper.herokuapp.com/api/animals`);
+  console.log ('---------------');
+  console.log (process.env.PORT);
  });
