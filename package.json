@@ -1,0 +1,31 @@
+{
+  "name": "node-js-express-js-based-app-zookeeper",
+  "version": "1.0.1",
+  "description": "Animal data-base inquiry app for local zoo",
+  "main": "n/a",
+  "scripts": {
+    "test": "n/a",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MercuryKTgithub/KU_CodingBootcamp_Zookeeper.git"
+  },
+  "keywords": [
+    "node.js",
+    "express.js",
+    "npm",
+    "json",
+    "database",
+    "interaction"
+  ],
+  "author": "bootcamp student and affiliate",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MercuryKTgithub/KU_CodingBootcamp_Zookeeper/issues"
+  },
+  "homepage": "https://github.com/MercuryKTgithub/KU_CodingBootcamp_Zookeeper#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
