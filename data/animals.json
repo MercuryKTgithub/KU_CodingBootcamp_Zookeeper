@@ -135,6 +135,15 @@
         "hungry"
       ],
       "id": "13"
+    },
+    {
+      "name": "Candy",
+      "species": "lemur",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "pessimistic"
+      ],
+      "id": "14"
     }
   ]
 }

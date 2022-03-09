@@ -116,6 +116,7 @@ function createNewAnimal(body, animalsArray) {
 // // }
 
 // need to use listen() method onto our server to make our server listen
+
 app.listen(MYPORT, () => {
   console.log(`API server now on port ${MYPORT}`);
   console.log(`Example app listening at http://localhost:${MYPORT}/api/animals`);
