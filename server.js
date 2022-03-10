@@ -4,13 +4,15 @@ const path = require('path');
 
 const { animals } = require('./data/animals.json');
 // const PORT = 3001;
-const MYPORT = process.env.PORT || 3000;
+const MYPORT = process.env.PORT || 3003;
 // To instantiate the server
 const app = express();
 // parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
 app.use(express.json());
+
+app.use(express.static('public'));
 
 function filterByQuery(query, animalsArray) {
   let personalityTraitsArray = [];
@@ -51,6 +53,14 @@ function findById(id, animalsArray) {
   const result = animalsArray.filter(animal => animal.id === id)[0];
   return result;
 }
+
+app.get('/zookeepers', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/zookeepers.html'));
+});
+
+app.get('/animals', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/animals.html'));
+});
 
 // parameter-1: a string that describes the route the client will have to fetch from
 // parameter-2: callback function that will execute every time that route is accessed with a GET request
@@ -115,12 +125,23 @@ function createNewAnimal(body, animalsArray) {
 // //   // return body;
 // // }
 
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
+//any route that wasn't previously defined will fall under this request and will receive the homepage as the response
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
 // need to use listen() method onto our server to make our server listen
 
 app.listen(MYPORT, () => {
   console.log(`API server now on port ${MYPORT}`);
+  console.log(`Example app listening at http://localhost:${MYPORT}/`); // index pages
   console.log(`Example app listening at http://localhost:${MYPORT}/api/animals`);
   console.log(`Example app listening at https://mercuryktzookeeper.herokuapp.com/api/animals`);
   console.log ('---------------');
-  console.log (process.env.PORT);
+  console.log (process.env.PORT); // prints undifine within local directory
  });

@@ -144,6 +144,42 @@
         "pessimistic"
       ],
       "id": "14"
+    },
+    {
+      "name": "Benson",
+      "species": "lemur",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "pessimistic"
+      ],
+      "id": "15"
+    },
+    {
+      "name": "Ronda",
+      "species": "lemur",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "pessimistic"
+      ],
+      "id": "16"
+    },
+    {
+      "name": "TestWedName",
+      "species": "TestWedSpecies",
+      "diet": "folivore",
+      "personalityTraits": [
+        "anxious"
+      ],
+      "id": "17"
+    },
+    {
+      "name": "AninalNameT2",
+      "species": "SpeciesT2",
+      "diet": "piscivore",
+      "personalityTraits": [
+        "goofy"
+      ],
+      "id": "18"
     }
   ]
 }
